@@ -17,7 +17,7 @@
   var main = querySelector('main');
 
   function closeMenu() {
-    body.remove('open');
+    body.classList.remove('open');
     navdrawerContainer.classList.remove('open');
   }
 
