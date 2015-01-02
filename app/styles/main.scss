@@ -40,6 +40,11 @@ body {
         -webkit-transition: transform 0.2s ease-in-out;
 }
 
+a {
+    text-decoration: none;
+    color: $blue;
+}
+
 div#top-wrap {
     position: fixed;
     width: 100%;
@@ -74,20 +79,36 @@ main {
     margin: 0 auto;
     position: relative;
     /* Height of About section */
-    top: 213px;
+    top: 667px;
     /* Height of the header */
-    padding: 60px 0 60px 0;
+    padding-top: 60px;
+    max-width: 100%;
 }
 
 section#about {
     background: url(/images/bg_about2.png);
     position: fixed;
+    height: 688px;
     width: 100%;
     top: 60px;
-    padding-top: 0;
+    .wrap {
+        padding-top: 0;
+    }
     h1 {
         font-family: 'Roboto Regular';
         text-align: left;
+        margin-bottom: 15px;
+    }
+    img#pic {
+        display: block;
+        max-width: 195px;
+        margin: 30px auto 5px;
+        border-radius: 50%;
+        box-shadow: 0 3px 5px rgba(0,0,0,0.5);
+    }
+    p {
+        padding: 0;
+        max-width: 100%;
     }
 }
 
@@ -96,7 +117,27 @@ section#projects {
     position: relative;
 }
 
-section#uwaterloo {}
+/* MOBILE ADJUSTMENT */
+.relative-position {
+    position: relative !important;
+    padding-top: 25px;
+    height: auto !important;
+    img#pic {
+        margin: 0 auto 20px;
+    }
+    p {
+        font-size: 17px;
+    }
+}
+
+.remove-top-position {
+    top: 0;
+}
+
+.nav-icon-adjust {
+    color: white;
+    border-bottom: none;
+}
 
 section:nth-child(odd) {
     background-color: white;
@@ -327,9 +368,21 @@ main {
     background-color: rgba(255, 255, 255, 0.4);
 }
 /** Larger Screens - desktops and tablets **/
+@media only screen and (min-width: 680px) {
+  #about h1 {
+    font-size: 68px !important;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    top: 615px;
+  }
+}
+
 @media all and (min-width: 990px) {
     #profile-icons {
-        height: 130px !important;
+        height: 132px !important;
         ul#icon-list {
             line-height: 142px !important;
             li {
@@ -338,6 +391,30 @@ main {
                     font-size: 2em !important;
                 }
             }
+        }
+    }
+    main {
+        top: 192px + 470px;
+        padding-top: 0;
+        min-height: initial;
+    }
+
+    section#about {
+        top: 192px;
+        height: 470px;
+        .wrap {
+            padding-top: 30px;
+        }
+        img#pic {
+            display: inline-block;
+            position: absolute;
+            right: 5%;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        p {
+            max-width: 78%;
         }
     }
     .app-bar {
@@ -400,20 +477,46 @@ main {
     .navdrawer-container ul li {
         border: none;
     }
-    main {
-        top: 192px + 239px;
-        padding-top: 0;
-        min-height: initial;
-    }
-    section#about {
-        top: 192px;
-    }
     body {
         overflow-y: scroll;
     }
     body.open {
         transform: translate(0px, 0);
             -webkit-transform: translate(0px, 0);
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    img#pic {
+        right: 10% !important;
+        max-width: 205px !important;
+    }
+}
+
+@media only screen and (min-width: 1300px) {
+    img#pic {
+        max-width: 240px !important;
+    }
+}
+
+@media only screen and (min-width: 1450px) {
+    section#about {
+        .wrap {
+            padding-top: 60px !important;
+        }
+        p {
+            max-width: 90% !important;
+        }
+        img#pic {
+            right: 7% !important;
+            max-width: 240px !important;
+        }
+    }
+}
+
+@media only screen and (min-width: 1650px) {
+    img#pic {
+        right: 8% !important;
     }
 }
 
