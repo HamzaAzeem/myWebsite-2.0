@@ -17,18 +17,24 @@
 
   var navdrawerContainer = querySelector('.navdrawer-container');
   var body = document.body;
+  var about = document.querySelector('#about');
   var appbarElement = querySelector('.app-bar');
   var menuBtn = querySelector('.menu');
   var main = querySelector('main');
 
   function closeMenu() {
-    body.classList.remove('open');
-    navdrawerContainer.classList.remove('open');
+      about.classList.remove('open');
+      main.classList.remove('open');
+      navdrawerContainer.classList.remove('open');
   }
 
   function toggleMenu() {
-    body.classList.toggle('open');
-    navdrawerContainer.classList.add('opened');
+    about.classList.toggle('open');
+    main.classList.toggle('open');
+    if( navdrawerContainer.classList.contains('open') )
+      navdrawerContainer.classList.remove('open');
+    else
+      navdrawerContainer.classList.add('open');
   }
 
   // For when the user is on a mobile device or resizes their screen
@@ -59,6 +65,7 @@
   }
 
   main.addEventListener('click', closeMenu);
+  about.addEventListener('click', closeMenu);
   menuBtn.addEventListener('click', toggleMenu);
   navdrawerContainer.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
