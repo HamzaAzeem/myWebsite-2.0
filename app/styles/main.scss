@@ -4,6 +4,7 @@
 /* CONSTANTS */
 $blue: #0073CF;
 $dark-blue: #004F98;
+$grey: #404040;
 $dark-grey: #333;
 $light-grey: #eee;
 
@@ -43,6 +44,12 @@ body {
 a {
     text-decoration: none;
     color: $blue;
+    &:visited {
+        color:$blue;
+    }
+    &:hover {
+        color: $grey;
+    }
 }
 
 div#top-wrap {
@@ -83,6 +90,9 @@ main {
     /* Height of the header */
     padding-top: 60px;
     max-width: 100%;
+    transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
 }
 
 section#about {
@@ -110,11 +120,85 @@ section#about {
         padding: 0;
         max-width: 100%;
     }
+    transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
 }
 
 section#projects {
     box-shadow: 0 -3px 3px rgba(0,0,0,0.2);
     position: relative;
+
+    #projects-list {
+        padding: 0;
+        padding-top: inherit;
+        list-style: none;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        li {
+            padding: 0;
+            &::before {
+                content: "";
+            }
+            &:not(:first-child) {
+                padding-top: 15px;
+            }
+            h3 {
+                font-family: "Roboto Condensed";
+                font-size: 30px;
+                font-weight: 600;
+                padding-top: 0;
+            }
+            p {
+                margin: 0 auto;
+                max-width: 80%;
+                font-size: 16px;
+            }
+        }
+    }
+
+    p#more-projects {
+        text-align: center;
+    }
+}
+
+section#experience {
+    h1 {
+        margin-bottom: 50px;
+    }
+    .job {
+        display: block;
+        padding: 30px 0;
+        text-align: center;
+        
+        div.company-logo-holder {
+            img {
+                max-width: 220px;
+            }
+        }
+
+        p.job-title {
+            font-family: "Roboto Thin";
+
+            padding-top: 10px;
+        }
+
+        ul.job-desc {
+            font-size: 16px;
+            text-align: left;
+        }
+
+        &:not(:first-child) {
+            padding-top: 0;
+        }
+    }
+}
+
+section#contact {
+    p {
+        text-align: center; 
+    }
 }
 
 /* MOBILE ADJUSTMENT */
@@ -302,18 +386,14 @@ ol {
     -webkit-transform: translate(-250px, 0);
     transform: translate(-250px, 0);
     overflow-y: auto;
+    transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+            -moz-transition: all 0.2s ease-in-out;
 }
 
 .navdrawer-container.open {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
-}
-
-.app-bar,
-.navdrawer-container.opened,
-main {
-    -webkit-transition: -webkit-transform 0.3s ease-out;
-    transition: transform 0.3s ease-out;
 }
 
 .navdrawer-container h4,
@@ -375,9 +455,36 @@ main {
 }
 
 @media only screen and (min-width: 800px) {
-  main {
-    top: 615px;
-  }
+    main {
+        top: 615px;
+    }
+
+    .job img {
+        max-width: 280px !important;
+    }
+
+    #projects-list {
+        li {
+            padding: 0 15px !important;
+            &::before {
+                content: "";
+            }
+            h3 {
+                font-size: 23px;
+                padding-top: 0;
+            }
+            float: left;
+            max-width: 100%;
+        }
+    }
+
+    section#experience {
+        .job {
+            ul.job-desc {
+                font-size: 19px;
+            }
+        }
+    }
 }
 
 @media all and (min-width: 990px) {
@@ -416,6 +523,30 @@ main {
         p {
             max-width: 78%;
         }
+    }
+
+    #projects-list {
+        li {
+            max-width: 33%;
+
+
+            &:nth-child(4n + 0) {
+                clear: left;
+            }
+        }
+    } 
+
+    section#experience {
+      .job {
+        text-align: left;
+        div.company-logo-holder {
+          text-align: left;
+        }
+
+        &:nth-child(odd) div.company-logo-holder {
+            text-align: right;
+        }
+      } 
     }
     .app-bar {
         position: relative;
@@ -480,10 +611,6 @@ main {
     body {
         overflow-y: scroll;
     }
-    body.open {
-        transform: translate(0px, 0);
-            -webkit-transform: translate(0px, 0);
-    }
 }
 
 @media only screen and (min-width: 1100px) {
@@ -542,6 +669,14 @@ main {
     font-weight: normal;
     src: url(/fonts/roboto-thin.eot);
     src: local("Roboto Thin"), local("roboto-thin"), url(/fonts/roboto-thin.eot) format("embedded-opentype"), url(/fonts/roboto-thin.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 600;
+    src: url(./fonts/robotocondensed-bold.eot);
+    src: local("Roboto Thin"), local("robotocondensed-bold"), url(./fonts/robotocondensed-bold.eot) format("embedded-opentype"), url(/fonts/robotocondensed-bold.woff) format("woff");
 }
 
 @font-face {
