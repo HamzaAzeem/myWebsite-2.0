@@ -2,10 +2,6 @@
   'use strict';
 
   changePositioning();
-
-  window.addEventListener('resize', function() {
-    changePositioning();
-  }, true);
   var querySelector = document.querySelector.bind(document);
 
   // grab an element
@@ -17,10 +13,15 @@
 
   var navdrawerContainer = querySelector('.navdrawer-container');
   var body = document.body;
-  var about = document.querySelector('#about');
+  var about = querySelector('#about');
   var appbarElement = querySelector('.app-bar');
   var menuBtn = querySelector('.menu');
   var main = querySelector('main');
+  var mobile;
+
+  // Initial page load causes scroll event to fire despite not receiving user input
+  // After first "detection", counter increases to one
+  var count = 0;
 
   function closeMenu() {
       about.classList.remove('open');
@@ -39,6 +40,11 @@
 
   // For when the user is on a mobile device or resizes their screen
   function changePositioning() {
+    if( window.innerWidth > 990 )
+      mobile = false;
+    else
+      mobile = true;
+
     if( window.innerHeight < 688 && window.innerWidth < 600 ) {
       document.querySelector('#about').classList.add('relative-position');
       document.querySelector('main').classList.add('remove-top-position');
@@ -64,9 +70,19 @@
     }
   }
 
+  window.addEventListener('resize', function() {
+    changePositioning();
+  }, true);
+  window.addEventListener('scroll', function() {
+    count++;
+    if( count > 1 && !mobile && body.scrollTop > 477 )
+      console.log("SHRINK!");
+  }, true);
+
   main.addEventListener('click', closeMenu);
   about.addEventListener('click', closeMenu);
   menuBtn.addEventListener('click', toggleMenu);
+
   navdrawerContainer.addEventListener('click', function (event) {
     if (event.target.nodeName === 'A' || event.target.nodeName === 'LI') {
       closeMenu();

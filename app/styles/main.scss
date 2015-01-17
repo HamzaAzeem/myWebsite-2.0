@@ -78,6 +78,14 @@ h1 {
     padding: 0;
 }
 
+main section h1:before {
+    visibility: hidden;
+    height: 110px;
+    margin-top: -110px;
+    content: " ";
+    display: block;
+}
+
 body.open {
     overflow: hidden;
 }
@@ -110,6 +118,7 @@ section#about {
         margin-bottom: 15px;
     }
     img#pic {
+        pointer-events: none;
         display: block;
         max-width: 195px;
         margin: 15px auto 5px;
@@ -343,6 +352,7 @@ section:nth-child(even) {
             display: inline-block;
             padding: 0;
             line-height: 60px;
+            font-size: 17px;
             li {
                 float: left;
                 padding: 0 10px;
@@ -385,7 +395,7 @@ ol {
     color: #fefefe;
     -webkit-transform: translate(-250px, 0);
     transform: translate(-250px, 0);
-    overflow-y: auto;
+    overflow-y: hidden;
     transition: all 0.2s ease-in-out;
         -webkit-transition: all 0.2s ease-in-out;
             -moz-transition: all 0.2s ease-in-out;
@@ -504,7 +514,15 @@ ol {
         top: 192px + 470px;
         padding-top: 0;
         min-height: initial;
-    }
+
+        section h1:before {
+            visibility: hidden;
+            height: 240px;
+            margin-top: -240px;
+            content: " ";
+            display: block;
+        }
+    } 
 
     section#about {
         top: 192px;

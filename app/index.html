@@ -12,6 +12,7 @@
     <!-- Fallback to homescreen for Chrome <39 on Android -->
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="application-name" content="Hamza Azeem Personal Site">
+    <meta name="description" content="Hamza Azeem's personal site">
     <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
 
     <!-- Add to homescreen for Safari on iOS -->
@@ -55,26 +56,27 @@
         <h4>MENU</h4>
         <ul>
           <li><a href="#">about</a></li>
-          <li><a href="#projects">projects</a></li>
-          <li><a href="#experience">experience</a></li>
+          <li><a href="#projects_head">projects</a></li>
+          <li><a href="#experience_head">experience</a></li>
           <li><a href="#contact">contact</a></li>
-          <li><a href="#">resume</a></li>
+          <li><a href="resume.pdf">resume</a></li>
         </ul>
       </nav>
     </div>
+    <div id="container">
     <section id="about">
       <img src="./images/me.jpg" alt="selfpic" id="pic">
       <div class="wrap">
         <h1>Hello!</h1>
         <p>My name is Hamza, a self-taught programmer studying Computer Engineering at the University of Waterloo. My interests lie mainly in tech, design, and fitness (as well as drinking hot chocoloate during Canadian winter). I'm passionate about the advancements in today's science and technology and I aspire to be among those in the front-line of this rapid growth. Through the path I'm pursuing I hope to one day make a positive impact on one or more person's life.</p>
         <br/>
-        <p>I'm always open to chat! Just shoot me an <a href="mailto:hamzaazeem1@gmail.com">email</a> and I'll get back to you as soon as I can.</p>
+        <p>I'm always open to chat! Just shoot me an email and I'll get back to you as soon as I can.</p>
       </div>
     </section>
     <main>
       <section id="projects">
         <div class="wrap">
-          <h1>projects</h1>
+          <h1 id="projects_head">projects</h1>
           <ul id="projects-list">
             <li>
               <h3>3D LED Matrix</h3>
@@ -97,9 +99,9 @@
             <li>
               <h3>myWaterloo</h3>
               <p>
-                A Chrome extension for Waterloo students made at EngHack Waterloo. It replaces the user's new-tab page with cafeteria menu, a todo list, weather, and more
+                A Chrome extension for Waterloo students made with friends at EngHack Waterloo. It replaces the user's new-tab page with cafeteria menu, a todo list, weather, and more
                 <br>
-                -<a href="http://github.com/HamzaAzeem/Pedometer" target="_blank">source</a>-
+                -<a href="https://github.com/RaunaqSuri/ENGHACK-2014" target="_blank">source</a>-
               </p>
               <br>
             </li>
@@ -138,7 +140,7 @@
       </section>
       <section id="experience">
         <div class="wrap">
-          <h1>experience</h1>
+          <h1 id="experience_head">experience</h1>
           <secion class="job" id="synacor">
             <div class="company-logo-holder">
               <a href="http://synacor.com">
@@ -185,7 +187,7 @@
         </div>
       </section>
     </main>
-
+</div>
     <!-- build:js scripts/main.min.js -->
     <script src="scripts/headroom.min.js"></script>
     <script src="scripts/main.js"></script>
