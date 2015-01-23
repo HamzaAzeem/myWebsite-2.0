@@ -204,6 +204,8 @@ section#experience {
                 &:before {
                     display: none;
                 }
+                padding-left: 0;
+                margin-left: 10px;
             }
         }
 
@@ -502,6 +504,10 @@ ol {
         .job {
             ul.job-desc {
                 font-size: 19px;
+
+                li {
+                    padding-left: 16px;
+                }
             }
         }
     }
