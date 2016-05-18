@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hamza Azeem</title>
+
+    <!-- Add to homescreen -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Fallback to homescreen for Chrome <39 on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="application-name" content="Hamza Azeem Personal Site">
+    <meta name="description" content="Hamza Azeem's personal site">
+    <link rel="icon" sizes="192x192" href="images/touch/chrome-touch-icon-192x192.png">
+    <link rel="shortcut icon" href="images/webicon.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Hamza Azeem Personal Site">
+    <link rel="apple-touch-icon" href="images/touch/apple-touch-icon.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <meta name="theme-color" content="#0073CF">
+
+    <!--
+    <link rel="canonical" href="">
+    -->
+
+    <!-- Page styles -->
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <div id="top-wrap">
+      <header class="app-bar promote-layer">
+        <div class="app-bar-container">
+          <button class="menu fa fa-bars"><!-- <img src="images/hamburger.png" alt="Menu"> --></button>
+          <h1 class="logo">hamza<span>azeem</span></h1>
+          <div id="profile-icons">
+            <ul id="icon-list">
+              <li><a href="mailto:hamzaazeem1@gmail.com" class="fa fa-envelope"></a></li>
+              <li><a href="http://github.com/hamzaazeem" class="fa fa-github-alt" target="_blank"></a></li>
+              <li><a href="http://linkedin.com/in/hamzaazeem" class="fa fa-linkedin" target="_blank"></a></li>
+            </ul>
+          </div>
+          <section class="app-bar-actions">
+          </section>
+        </div>
+      </header>
+      <nav class="navdrawer-container promote-layer">
+        <h4>MENU</h4>
+        <ul>
+          <li><a href="#">about</a></li>
+          <li><a href="#projects_head">projects</a></li>
+          <li><a href="#experience_head">experience</a></li>
+          <li><a href="#contact">contact</a></li>
+          <li><a href="resume.pdf">resume</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div id="container">
+    <section id="about">
+      <img src="./images/me.jpg" alt="selfpic" id="pic">
+      <div class="wrap">
+        <h1>Hello!</h1>
+        <p>My name is Hamza, a self-taught programmer studying Computer Engineering at the University of Waterloo. My interests lie mainly in tech, design, and fitness (as well as drinking hot chocolate during Canadian winter). I'm passionate about the advancements in today's science and technology and I aspire to be among those at the front-line of this rapid growth. Through the path I'm pursuing I hope to one day make a positive impact on one or more person's life.</p>
+        <br/>
+        <p>I'm always open to chat! Just shoot me an email and I'll get back to you as soon as I can.</p>
+      </div>
+    </section>
+    <main>
+      <section id="projects">
+        <div class="wrap">
+          <h1 id="projects_head">projects</h1>
+          <ul id="projects-list">
+            <li>
+              <h3>3D LED Matrix</h3>
+              <p class="project-desc">
+                  A 4x4x4 LED cube that animates and interacts with users via its photocell and ultrasonic sensors. You can also control specific LEDs through a bluetooth module with an Android device
+                  <br>
+              </p>
+              <span class="read-more"></span>
+              <p>-<a href="http://github.com/HamzaAzeem/Three_Dimensional_LED_Matrix" target="_blank">source</a>-</p>
+              <br>
+            </li>
+            <li>
+              <h3>Get My Mangos</h3>
+              <p class="project-desc">
+                A little python web-scraper that downloads user-specified comic pages from various sources for offline reading
+                <br>
+              </p>
+              <span class="read-more"></span>
+              <p>-<a href="http://github.com/HamzaAzeem/get_my_mangos" target="_blank">source</a>-</p>
+              <br>
+            </li>
+            <li>
+              <h3>myWaterloo</h3>
+              <p class="project-desc">
+                A Chrome extension for Waterloo students made with friends at EngHack Waterloo. It replaces the user's new-tab page with cafeteria menu, a todo list, weather, and more
+                <br>
+              </p>
+              <span class="read-more"></span>
+              <p>-<a href="https://github.com/RaunaqSuri/ENGHACK-2014" target="_blank">source</a>-</p>
+              <br>
+            </li>
+            <li>
+              <h3>PebbleRun</h3>
+              <p class="project-desc">
+                A project created at uWaterloo's Hack the North hackathon. It's a web-app that uses Google Maps API and loads routes to the user's Pebble watch for offline navigation for their bike-ride or morning/afternoon jog
+                <br>
+              </p>
+              <span class="read-more"></span>
+              <p>-<a href="http://github.com/HamzaAzeem/PebbleRun" target="_blank">source</a>-</p>
+              
+              <br>
+            </li>
+            <li>
+              <h3>Pedometer</h3>
+              <p class="project-desc">
+                An Android app that uses a low-pass filter to reduce noise from accelerometer and allows for step-calibration for 97% accuracy
+                <br>
+              </p>
+              <span class="read-more"></span>
+              <p>-<a href="http://github.com/HamzaAzeem/Pedometer" target="_blank">source</a>-</p>
+              <br>
+            </li>
+            <li>
+              <h3>FeederReader</h3>
+              <p class="project-desc">
+                A web-app that parses RSS feeds and displays it on the screen. User can favourite and have easy-access to previously used RSS feeds
+                <br>
+              </p>
+              <span class="read-more"></span>
+              <p>-<a href="http://github.com/HamzaAzeem/FeederReader" target="_blank">source</a>-</p>
+              <br>
+            </li>
+          </ul>
+          <p id="more-projects">
+            Check out some of my <a href="http://github.com/HamzaAzeem/"> other projects</a>
+          </p>
+        </div>
+      </section>
+      <section id="experience">
+        <div class="wrap">
+          <h1 id="experience_head">experience</h1>
+          <div class="job" id="ultimate">
+            <div class="company-logo-holder">
+              <a href="http://ultimatesoftware.com">
+                <img src="./images/ultimate.png" alt="Ultimate logo">              
+              </a>
+              <p class="job-title">
+                <b>Software Engineer</b>
+                <br>January to April 2015
+              </p>
+            </div>
+            <ul class="job-desc">
+              <li>Owned and initiated ELK Big Data project for real-time log management and analytics</li>
+              <li>Developed full-stack Web and Android platforms while gaining proficiency in efficient large-scale database organization</li>
+              <li>Experience gained in large-scale advanced Java server architecture, GWT, Hibernate, Android</li>
+            </ul>
+          </div>
+          <div class="job" id="oracle">
+            <div class="company-logo-holder">
+              <a href="http://oracle.com">
+                <img src="./images/oracle.png" alt="Oracle logo">              
+              </a>
+              <p class="job-title">
+                <b>Software Developer</b>
+                <br>May to August 2015
+              </p>
+            </div>
+            <ul class="job-desc">
+              <li>Owned and published a scalable new product to the Chrome Store with now 850+ users</li>
+              <li>Won first place in a cross-office hackathon of 15-20 teams after which the project became productized. This became my main project for the work term</li>
+              <li>Took the project from POC to Release in under 4 months. Got featured at Oracle's 2016 keynote at MGM Grand in Las Vegas</li>
+              <li>Improved RESTful API design using Jersey Java Web Services framework by abstracting various classes and interfaces to work more effectively with newly added endpoints. This included custom endpoints for the Chrome Extension that was released</li>
+            </ul>
+          </div>
+          <div class="job" id="synacor">
+            <div class="company-logo-holder">
+              <a href="http://synacor.com">
+                <img src="./images/synacor.png" alt="Synacor logo">              
+              </a>
+              <p class="job-title">
+                <b>Software Engineer</b>
+                <br>September to December 2014
+              </p>
+            </div>
+            <ul class="job-desc">
+              <li>Worked independently to design and develop MVC apps and tools using Synacor's minimal Javascript framework. One of the first projects I created was a music player and catalog powered by Rdio's Javascript API</li>
+              <li>Took on various-sized projects for weekly sprints and implemented the front-end entirely in vanilla Javascript while back-end repositories mainly used Python</li>
+              <li>Provided full coverage testing to existing and newly created web-tool repositories with the Mocha-Chai-Sinon combo for client-side code and the 'unittest' framework for Python code</li>
+            </ul>
+          </div>
+          <div class="job" id="rogers">
+            <div class="company-logo-holder">
+              <a href="http://rogers.com">
+                <img src="./images/rogers.png" alt="Rogers logo">              
+              </a>
+              <p class="job-title">
+                <b>Web Developer</b>
+                <br>January to April 2014
+              </p>
+            </div>
+            <ul class="job-desc">
+              <li>Quickly learned various front-end technologies to contribute to codebase for the Rogers Responsive Redesign Project</li>
+              <li>Exposed to Agile environment and gained experience in numerous web technologies</li>
+              <li>Compiled and tested Ant builds in IBM Rational Team Concert. I also executed detailed test-cases and documented results across various mobile platforms</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <div class="wrap">
+          <h1>contact</h1>
+          <p>If you want to get in touch, shoot me an <a href="mailto:hamzaazeem1@gmail.com">email</a>. I'd love to chat!</p>
+          <p>Or find me on 
+            <a href="http://github.com/HamzaAzeem">github</a>, 
+            <a href="http://linkedin.com/in/HamzaAzeem">linkedin</a>, and
+            <a href="http://twitter.com/hamzaazeem_">twitter</a>
+          </p>
+        </div>
+      </section>
+    </main>
+</div>
+    <!-- build:js scripts/main.min.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-51267004-3', 'auto');
+      ga('send', 'pageview');
+  </script>
+  </body>
+</html>
